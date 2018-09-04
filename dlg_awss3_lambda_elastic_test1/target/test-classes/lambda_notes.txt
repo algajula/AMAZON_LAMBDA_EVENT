@@ -1,0 +1,75 @@
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/QuickStartEC2Instance.html
+
+To configure your IAM role or user for CloudWatch Logs
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+In the navigation pane, choose Roles.
+
+Choose the role by selecting the role name (do not select the check box next to the name).
+
+Choose Attach Policies, Create Policy.
+
+A new browser tab or window opens.
+
+Choose the JSON tab and type the following JSON policy document.
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+    ],
+      "Resource": [
+        "arn:aws:logs:*:*:*"
+    ]
+  }
+ ]
+}
+
+When you are finished, choose Review policy. The Policy Validator reports any syntax errors.
+
+On the Review Policy page, type a Name and a Description (optional) for the policy that you are creating. Review the policy Summary to see the permissions that are granted by your policy. Then choose Create policy to save your work.
+
+Close the browser tab or window, and return to the Add permissions page for your role. Choose Refresh, and then choose the new policy to attach it to your role.
+
+Choose Attach Policy.
+
+
+  AWSLambdaBasicExecutionRole
+AWS managed policy
+
+  AWSLambdaFullAccess
+AWS managed policy
+
+  AWSCodeDeployRoleForLambda
+AWS managed policy
+
+  AWSLambdaExecute
+AWS managed policy
+
+AWSLambdaTracerAccessExecutionRole-50137c38-d35a-4ece-a78c-deb99190786a
+Managed policy
+
+AWSLambdaTracerAccessExecutionRole-4d042c9f-afaa-4e8b-b1f5-66fe3138c8b9
+Managed policy
+
+  AWSLambdaVPCAccessExecutionRole
+AWS managed policy
+
+dlgpolicy
+Managed policy
+
+  AWSLambdaRole
+AWS managed policy
+
+  AWSLambdaENIManagementAccess
+AWS managed policy
+
+oneClick_lambda_basic_execution_1536095768684
+Inline policy
